@@ -6,7 +6,9 @@
 Este repositorio contiene la infraestructura como código para desplegar una plataforma ecommerce completa en AWS usando Terraform.
 
 ## 🌐 Arquitectura
-![Diagrama de Arquitectura](./docs/architecture.png) *(Recomiendo añadir un diagrama)*
+![Diagrama de Arquitectura]
+
+https://www.mermaidchart.com/app/projects/2ac29c38-3f8d-4956-9fa0-5d1e795ef661/diagrams/4c40fc28-56b9-444c-9580-70e406c8bd20/version/v0.1/edit
 
 Componentes principales:
 - **Frontend**: CloudFront + S3
