@@ -5,8 +5,9 @@
 
 Este repositorio contiene la infraestructura como código para desplegar una plataforma ecommerce completa en AWS usando Terraform.
 
-## 🌐 Arquitectura
-![Diagrama de Arquitectura]
+##  Arquitectura
+
+# Diagrama de Arquitectura
 
 https://www.mermaidchart.com/app/projects/2ac29c38-3f8d-4956-9fa0-5d1e795ef661/diagrams/4c40fc28-56b9-444c-9580-70e406c8bd20/version/v0.1/edit
 
@@ -17,8 +18,8 @@ Componentes principales:
 - **Caché**: ElastiCache Redis
 - **Redes**: VPC con subnets públicas/privadas
 
-```
-📂 Estructura del Proyecto:
+
+## Estructura del Proyecto:
 .
 ├── modules/
 │   ├── networking/       # VPC, Subnets, Security Groups
@@ -31,16 +32,16 @@ Componentes principales:
 ├── outputs.tf            # Valores de salida
 ├── terraform.tfvars.example  # Ejemplo de configuración
 └── README.md             # Este archivo
-```o
 
 
-## 🚀 Requisitos Previos
+
+## Requisitos Previos
 1. **Terraform** (>= 1.3.0) - [Instalación](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 2. **AWS CLI** configurado - [Guía](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
 3. **Credenciales AWS** con permisos adecuados
 4. **Par de claves SSH** registrado en AWS
 
-## 🔧 Configuración Inicial
+##  Configuración Inicial
 
 1. Copiar el archivo de configuración de ejemplo:
    ```bash
