@@ -9,7 +9,7 @@ Este repositorio contiene la infraestructura como código para desplegar una pla
 
 ## Diagrama de Arquitectura
 
-https://www.mermaidchart.com/app/projects/2ac29c38-3f8d-4956-9fa0-5d1e795ef661/diagrams/4c40fc28-56b9-444c-9580-70e406c8bd20/version/v0.1/edit
+[Diagrama](https://www.mermaidchart.com/app/projects/2ac29c38-3f8d-4956-9fa0-5d1e795ef661/diagrams/4c40fc28-56b9-444c-9580-70e406c8bd20/version/v0.1/edit)
 
 Componentes principales:
 - **Frontend**: CloudFront + S3
@@ -48,19 +48,19 @@ Estructura del Proyecto:
    ```bash
    cp terraform.tfvars.example terraform.tfvars
 
-# Credenciales críticas (usar Secrets Manager en producción)
+## Credenciales críticas (usar Secrets Manager en producción)
 db_username = "admin_db"
 db_password = "password_segura" # Cambiar obligatoriamente
 
-# Inicializar Terraform
+## Inicializar Terraform
 terraform init
 
-# Revisar cambios planeados
+## Revisar cambios planeados
 terraform plan -var-file="terraform.tfvars"
 
-# Aplicar cambios
+## Aplicar cambios
 terraform apply -var-file="terraform.tfvars"
 
-# Destruir infraestructura (cuidado!)
+## Destruir infraestructura (cuidado!)
 terraform destroy
    
