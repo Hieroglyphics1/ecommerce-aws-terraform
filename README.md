@@ -48,11 +48,10 @@ Estructura del Proyecto:
    ```bash
    cp terraform.tfvars.example terraform.tfvars
 
-### Credenciales críticas
+### Credenciales críticas y Comandos esenciales 
 ```hcl
 db_username = "admin_db"
 db_password = "password_segura" # Cambiar obligatoriamente
-```
 
 # Inicializar
 terraform init
