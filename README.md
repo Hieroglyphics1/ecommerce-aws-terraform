@@ -5,9 +5,9 @@
 
 Este repositorio contiene la infraestructura como código para desplegar una plataforma ecommerce completa en AWS usando Terraform.
 
-##  Arquitectura
+#  Arquitectura
 
-# Diagrama de Arquitectura
+## Diagrama de Arquitectura
 
 https://www.mermaidchart.com/app/projects/2ac29c38-3f8d-4956-9fa0-5d1e795ef661/diagrams/4c40fc28-56b9-444c-9580-70e406c8bd20/version/v0.1/edit
 
@@ -19,7 +19,8 @@ Componentes principales:
 - **Redes**: VPC con subnets públicas/privadas
 
 
-## Estructura del Proyecto:
+```
+Estructura del Proyecto:
 .
 ├── modules/
 │   ├── networking/       # VPC, Subnets, Security Groups
@@ -32,7 +33,7 @@ Componentes principales:
 ├── outputs.tf            # Valores de salida
 ├── terraform.tfvars.example  # Ejemplo de configuración
 └── README.md             # Este archivo
-
+```
 
 
 ## Requisitos Previos
