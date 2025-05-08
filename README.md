@@ -48,19 +48,20 @@ Estructura del Proyecto:
    ```bash
    cp terraform.tfvars.example terraform.tfvars
 
-## Credenciales críticas (usar Secrets Manager en producción)
+### Credenciales críticas
+```hcl
 db_username = "admin_db"
 db_password = "password_segura" # Cambiar obligatoriamente
+   
 
-## Inicializar Terraform
+# Inicializar
 terraform init
 
-## Revisar cambios planeados
+# Planificar cambios
 terraform plan -var-file="terraform.tfvars"
 
-## Aplicar cambios
+# Aplicar
 terraform apply -var-file="terraform.tfvars"
 
-## Destruir infraestructura (cuidado!)
+# Destruir (¡Cuidado!)
 terraform destroy
-   
