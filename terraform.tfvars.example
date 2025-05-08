@@ -1,0 +1,101 @@
+# =============================================
+# PLANTILLA DE CONFIGURACIÓN TERRAFORM (EJEMPLO)
+# =============================================
+# Copiar este archivo a terraform.tfvars y completar los valores
+
+
+# ======================
+# CONFIGURACIÓN GLOBAL
+# ======================
+
+# Entorno de despliegue (valores posibles: dev, staging, prod)
+environment = "dev"
+
+# Región AWS (us-east-1, us-west-2, etc.)
+aws_region = "us-east-1"
+
+
+# ======================
+# CONFIGURACIÓN DE RED
+# ======================
+
+# Bloque CIDR para la VPC (debe ser único en tu infraestructura)
+vpc_cidr = "10.0.0.0/16"
+
+# Subredes públicas (deben estar dentro del rango VPC)
+public_subnet_cidrs = [
+  "10.0.1.0/24",
+  "10.0.2.0/24", 
+  "10.0.3.0/24"  # Añadir más según necesidad
+]
+
+# Subredes privadas (para recursos sin acceso directo a Internet)
+private_subnet_cidrs = [
+  "10.0.101.0/24",
+  "10.0.102.0/24",
+  "10.0.103.0/24"
+]
+
+# Zonas de disponibilidad (consultar disponibles en tu región)
+availability_zones = [
+  "us-east-1a",
+  "us-east-1b", 
+  "us-east-1c"
+]
+
+
+# ======================
+# BASE DE DATOS (RDS)
+# ======================
+
+# Nombre de la base de datos (solo caracteres alfanuméricos)
+db_name = "ecommercedb"
+
+# Usuario administrador (no usar 'admin' o 'root' en producción)
+db_username = "usuario_admin_ecommerce"
+
+# Contraseña (debe contener mayúsculas, números y caracteres especiales)
+db_password = "REEMPLAZAR_CON_CONTRASEÑA_SEGURA"  # Min 12 caracteres
+
+
+# ======================
+# CACHÉ (ELASTICACHE)
+# ======================
+
+# Tipo de nodo (para producción considerar cache.t3.medium o superior)
+node_type = "cache.t3.micro"  # Solo adecuado para entornos de desarrollo
+
+
+# ======================
+# COMPUTO (EC2/ALB)
+# ======================
+
+# AMI base (actualizar con la última AMI de Amazon Linux 2)
+ami_id = "ami-0c55b159cbfafe1f0"  # Ejemplo para us-east-1
+
+# Tipo de instancia (t3.medium recomendado para producción)
+instance_type = "t3.micro"  # Reducir costos en desarrollo
+
+# Nombre del par de claves SSH (debe existir previamente en AWS)
+key_name = "nombre_de_tu_key_pair_aws"  # Crear en AWS Console > EC2 > Key Pairs
+
+
+# ======================
+# FRONTEND
+# ======================
+
+# Dominio personalizado (ej: "tienda.com") - Opcional
+domain_name = ""
+
+# ===========================================
+# INSTRUCCIONES DE USO:
+#
+# 1. Copiar este archivo:
+#    cp terraform.tfvars.example terraform.tfvars
+#
+# 2. Completar TODOS los valores entre comillas
+#
+# 3. Para producción:
+#    - Cambiar instance_type a t3.medium o superior
+#    - Cambiar node_type a cache.t3.medium o superior
+# ===========================================
