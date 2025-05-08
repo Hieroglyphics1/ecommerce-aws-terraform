@@ -15,19 +15,21 @@ Componentes principales:
 - **Caché**: ElastiCache Redis
 - **Redes**: VPC con subnets públicas/privadas
 
-## 📂 Estructura del Proyecto
-
+```
+📂 Estructura del Proyecto:
+.
 ├── modules/
-│ ├── networking/ # VPC, Subnets, Security Groups
-│ ├── database/ # RDS Configuration
-│ ├── compute/ # EC2, ALB, Auto Scaling
-│ ├── caching/ # ElastiCache Redis
-│ └── monitoring/ # CloudWatch Alarms
-├── main.tf # Configuración principal
-├── variables.tf # Variables de entrada
-├── outputs.tf # Valores de salida
-├── terraform.tfvars.example # Ejemplo de configuración
-└── README.md # Este archivo
+│   ├── networking/       # VPC, Subnets, Security Groups
+│   ├── database/         # RDS Configuration
+│   ├── compute/          # EC2, ALB, Auto Scaling
+│   ├── caching/          # ElastiCache Redis
+│   └── monitoring/       # CloudWatch Alarms
+├── main.tf               # Configuración principal
+├── variables.tf          # Variables de entrada
+├── outputs.tf            # Valores de salida
+├── terraform.tfvars.example  # Ejemplo de configuración
+└── README.md             # Este archivo
+```o
 
 
 ## 🚀 Requisitos Previos
