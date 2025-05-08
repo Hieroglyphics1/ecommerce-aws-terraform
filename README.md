@@ -52,7 +52,7 @@ Estructura del Proyecto:
 ```hcl
 db_username = "admin_db"
 db_password = "password_segura" # Cambiar obligatoriamente
-   
+```
 
 # Inicializar
 terraform init
